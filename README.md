@@ -1,12 +1,23 @@
-# enum_oblako
-
-[![](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-
-S3/SAAS enumerator
+<h1 align="center">enum_oblako</h1>
+<div align="center">
+  S3/SAAS enumerator
+  <br>
+  <br>
+  <img alt="Static Badge" src="https://img.shields.io/badge/python-3.10+-blue.svg">
+  <img alt="Static Badge" src="https://img.shields.io/badge/tested%20on-Linux-blue.svg">
+  <p></p>
+  <a href="https://github.com/lisp3r/enum_oblako?tab=readme-ov-file#Installation">Install</a>
+  <span> • </span>
+  <a href="https://github.com/lisp3r/enum_oblako?tab=readme-ov-file#Enum%20S3%20buckets%20and%20SaaS">Documentation</a>
+  <span> • </span>
+	<a href="https://github.com/lisp3r/enum_oblako?tab=readme-ov-file#usage">Usage</a>
+  <p></p>
+</div>
 
 ## Enum S3 buckets and SaaS
 
 For now enum_oblako supports following services:
+
 - Slack
 - Atlassian
 - Salesforce
@@ -50,9 +61,9 @@ It supports two regions: ru and eu (or all if you want both):
 $ enum_oblako --generate --name <target name> --region eu --rps 100
 ```
 
-# Install
+## Installation
 
-## From Git
+### From Git
 
 ```sh
 $ git clone https://github.com/lisp3r/enum_oblako.git
@@ -63,8 +74,7 @@ $ cd enum_oblako
 ~/enum_oblako $ python enum_oblako --help
 ```
 
-
-## Using PIP
+### Using PIP
 
 ```bash
 $ python -m pip install https://github.com/etyvrox/enum_oblako/releases/latest/download/enum-oblako.tar.gz

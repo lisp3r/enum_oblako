@@ -4,7 +4,7 @@
 
 S3/SAAS enumerator
 
-# Enum S3 buckets and SaaS
+## Enum S3 buckets and SaaS
 
 For now enum_oblako supports following services:
 - Slack
@@ -30,27 +30,44 @@ Enum_oblako can be run in two modes:
 - Generate and enum (generate namespaces and bucketnames for you based on company's name)
 - Enum (run enumeration based on submitted namespaces' and buckets' files)
 
+## Usage
+
+```sh
+$ enum_oblako --generate --name <target name> --rps 100
+```
+
+It generates a list of mutations based on the target's name and the wordlists (`namespaces.txt`, `buckets.txt`).
+
+You can also supply you own wordlists:
+
+```sh
+$ enum_oblako --namespaces my_namespaces.txt --buckets my_buckets.txt --name <target name> --rps 100
+```
+
+It supports two regions: ru and eu (or all if you want both):
+
+```sh
+$ enum_oblako --generate --name <target name> --region eu --rps 100
+```
+
 # Install
 
+## From Git
+
+```sh
+$ git clone https://github.com/lisp3r/enum_oblako.git
+$ cd enum_oblako
+~/enum_oblako $ python -m venv .venv
+~/enum_oblako $ source .venv/bin/activate
+~/enum_oblako $ pip install -r requirements.txt
+~/enum_oblako $ python enum_oblako --help
+```
+
+
+## Using PIP
+
 ```bash
-python -m pip install https://github.com/etyvrox/enum_oblako/releases/latest/download/enum-oblako.tar.gz
+$ python -m pip install https://github.com/etyvrox/enum_oblako/releases/latest/download/enum-oblako.tar.gz
 ```
 
-:sleeping: pip is not supported yet
-
-# Run
-
-Generate:
-```
-enum_oblako --generate --name <name> --rps 100
-```
-
-Enum with prepared list (your namespaces and buckets files):
-```
-enum_oblako --namespaces namespaces.txt --buckets buckets.txt --name <test> --rps 100
-```
-
-Also it supports two regions: ru and eu (or all if you want both)
-```
-enum_oblako --generate --name <name> --region eu --rps 100
-```
+:sleeping: pip is not supported

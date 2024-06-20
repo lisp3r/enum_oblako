@@ -228,6 +228,3 @@ async def brute(gen, rps):
 
         await sess.close()
 
-
-if __name__ == "__main__":
-    cloudrec()
